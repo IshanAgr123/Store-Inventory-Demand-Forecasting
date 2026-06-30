@@ -1,8 +1,8 @@
 # Store Inventory Demand Analysis & Optimization
 
 Forecasting product demand and optimizing store inventory using classical time-series
-models and gradient boosting, with an SQL/Excel reporting layer and an interactive
-Power BI dashboard for tracking sales, stock, and stockout risk.
+models and gradient boosting, with an SQL/Excel reporting layer for tracking sales,
+stock, and stockout risk.
 
 > **Status:** Self-project · **Goal:** reduce stockouts and lost sales through better
 > demand forecasting and a data-driven reorder policy.
@@ -43,7 +43,6 @@ Daily retail sales across multiple stores and items over five years.
 | Forecasting / ML | Python, statsmodels, pmdarima, XGBoost, scikit-learn |
 | Data store / queries | SQL (SQLite) |
 | Reporting | Excel (Power Query, conditional formatting) |
-| Dashboard | Power BI (DAX measures) |
 | Environment | Google Colab / Jupyter |
 
 ## Approach
@@ -100,10 +99,8 @@ Daily retail sales across multiple stores and items over five years.
 ├── demand_forecasting.ipynb     # main notebook: EDA → models → backtest
 ├── forecast.png                 # forecast vs. actual plot
 ├── features.png                 # XGBoost feature importance
-├── sql/
-│   └── inventory_queries.sql    # reorder point + low-stock view
-└── dashboard/
-    └── store_inventory.pbix     # Power BI file (optional)
+└── sql/
+    └── inventory_queries.sql    # reorder point + low-stock view
 ```
 
 ## How to Run
@@ -113,7 +110,6 @@ Daily retail sales across multiple stores and items over five years.
    ```
 2. Download `train.csv` from the [Kaggle dataset](https://www.kaggle.com/competitions/demand-forecasting-kernels-only/data) and place it in a `data/` folder.
 3. Open `demand_forecasting.ipynb` in Google Colab or Jupyter and run top to bottom.
-4. (Optional) Open `dashboard/store_inventory.pbix` in Power BI Desktop to explore the dashboard.
 
 Dependencies:
 ```bash
